@@ -156,7 +156,7 @@ class AdminController extends Controller
 
         $competition->update(['user_id' => $userCek->id]);
 
-        $dataSend = ['username' => $request->username, 'password' => $password];
+        $dataSend = ['nama' => $competition->name, 'username' => $request->username, 'password' => $password];
 
         Mail::to($competition->email)->send(new SendMail($dataSend));
 

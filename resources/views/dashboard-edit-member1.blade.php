@@ -73,7 +73,8 @@
                 <input type="hidden" name="oldImage2" value="{{ $member1->idcard }}">
                 <p class="form-limit text-start ms-4 fw-bold">Kartu Identitas (KTP/SIM/Paspor)</p>
                 <div class="input-form-file position-relative d-flex align-items-center">
-                    <input type="file" name="idcard" id="form-input-file" class="custom-file-input" placeholder="">
+                    <input type="file" name="idcard" id="form-input-file" class="custom-file-input" placeholder=""
+                        required>
                     <!-- <span class="req position-absolute">*</span> -->
                 </div>
                 <input type="submit" value="Change" name="submit">

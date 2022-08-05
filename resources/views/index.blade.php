@@ -84,6 +84,19 @@
                     </svg>
                     REGISTRATION
                 </a>
+                <a href="{{ route('login-page') }}" class="menu-nav text-decoration-none text-black">
+                    <svg class="pr-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.89844 7.56023C9.20844 3.96023 11.0584 2.49023 15.1084 2.49023H15.2384C19.7084 2.49023 21.4984 4.28023 21.4984 8.75023V15.2702C21.4984 19.7402 19.7084 21.5302 15.2384 21.5302H15.1084C11.0884 21.5302 9.23844 20.0802 8.90844 16.5402"
+                            stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M2 12H14.88" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M12.6484 8.65039L15.9984 12.0004L12.6484 15.3504" stroke="#292D32" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    LOGIN
+                </a>
             </div>
         </div>
         <div id="nav-menu-out"
@@ -134,6 +147,19 @@
                 </svg>
                 REGISTRATION
             </a>
+            <a href="{{ route('login-page') }}" class="menu-nav text-decoration-none text-black">
+                <svg class="pr-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.89844 7.56023C9.20844 3.96023 11.0584 2.49023 15.1084 2.49023H15.2384C19.7084 2.49023 21.4984 4.28023 21.4984 8.75023V15.2702C21.4984 19.7402 19.7084 21.5302 15.2384 21.5302H15.1084C11.0884 21.5302 9.23844 20.0802 8.90844 16.5402"
+                        stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M2 12H14.88" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M12.6484 8.65039L15.9984 12.0004L12.6484 15.3504" stroke="#292D32" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                LOGIN
+            </a>
         </div>
     </section>
     <section id="banner" class="d-flex align-items-center">
@@ -183,10 +209,10 @@
                 <div class="text-lomba text-end">
                     <p class="non-button px-2 py-1">Capture The Flag</p>
                     <h1 class="main-title">Implement Cyber Security For a Safe Life</h1>
-                    <p class="main-subtitle">Webinar nasional dengan tema “Increase Oportunities productivity with An
-                        Efficient IoT Sollution” (Meningkatkan Peluang Prroduktivitas dengan Solusi IoT Yang Efisien).
-                        Menghadirkan Bambang Pamungkas membahas solusi dari IoT untuk sebuah problematika yang ada di
-                        dlingkungan masyarakat </p>
+                    <p class="main-subtitle">FOSTIFEST 2022 mengadakan perlombaan Capture The Flag (CTF) merupakan salah
+                        satu jenis dari kompetisi hacking yang dimana mengharuskan seorang atau tim untuk mengambil
+                        sebuah file atau string yang sudah disembunyikan sistem yang dimana disebut dengan istilah
+                        “Flag”.</p>
                     <p class="fw-bold">*Pendaftaran lomba batch 1 Rp 80.000 (FREE Webinar bagi pendaftar lomba)</p>
                     <a href="{{ route('competition') }}"
                         class="main-button btn px-2 py-1 text-decoration-none d-inline-block">Daftar Lomba</a>
@@ -239,10 +265,10 @@
                 <a href="https://www.instagram.com/fosti_ums/" target="_blank">
                     <img src="asset/instagram.png" alt="">
                 </a>
-                <a href="https://www.twitter.com" target="_blank" class="mx-3">
+                <a href="https://github.com/FOSTI-UMS" target="_blank" class="mx-3">
                     <img src="asset/twitter.png" alt="">
                 </a>
-                <a href="https://wa.me" target="_blank">
+                <a href="https://chat.whatsapp.com/E6sCVayTopBHMLlVAj1CSv" target="_blank">
                     <img src="asset/whatsapp.png" alt="">
                 </a>
             </div>

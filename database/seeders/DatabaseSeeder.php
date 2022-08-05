@@ -24,8 +24,8 @@ class DatabaseSeeder extends Seeder
         // ]);
         $users = [
             [
-                'username' => 'admin',
-                'password' => Hash::make('admin'),
+                'username' => 'fostifestadmin',
+                'password' => Hash::make('penguincarnivora22'),
                 'status' => 'Admin'
             ],
         ];

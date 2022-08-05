@@ -29,6 +29,7 @@ class WebinarMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('email.template2')->with('userMail', $this->userMail);
+        $this->subject('WEBINAR FOSTIFEST')->markdown('email.template2')->with('userMail', $this->userMail);
+        return $this;
     }
 }

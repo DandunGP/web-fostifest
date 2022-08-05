@@ -30,6 +30,7 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('email.template')->with('dataMail', $this->dataMail);
+        $this->subject('CTF FOSTIFEST')->markdown('email.template')->with('dataMail', $this->dataMail);
+        return $this;
     }
 }

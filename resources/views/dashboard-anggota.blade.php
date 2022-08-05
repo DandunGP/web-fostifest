@@ -122,13 +122,15 @@
                 <div id="from-ums-2" class="">
                     <p class="form-limit text-start ms-4 fw-bold">KTM UMS Anggota 2</p>
                     <div class="input-form-file position-relative d-flex align-items-center">
-                        <input type="file" name="ktm2" id="form-input-file" class="custom-file-input" placeholder="">
+                        <input type="file" name="ktm2" id="form-input-file" class="custom-file-input" placeholder=""
+                            required>
                         <!-- <span class="req position-absolute">*</span> -->
                     </div>
                 </div>
                 <p class="form-limit text-start ms-4 fw-bold">Kartu Identitas Anggota 2 (KTP/SIM/Paspor)</p>
                 <div class="input-form-file position-relative d-flex align-items-center">
-                    <input type="file" name="idcard2" id="form-input-file" class="custom-file-input" placeholder="">
+                    <input type="file" name="idcard2" id="form-input-file" class="custom-file-input" placeholder=""
+                        required>
                     <!-- <span class="req position-absolute">*</span> -->
                 </div>
                 <input type="submit" value="Change" name="submit-anggota-2">
@@ -166,13 +168,15 @@
                 <div id="from-ums-1" class="">
                     <p class="form-limit text-start ms-4 fw-bold">KTM UMS Anggota 1</p>
                     <div class="input-form-file position-relative d-flex align-items-center">
-                        <input type="file" name="ktm1" id="form-input-file" class="custom-file-input" placeholder="">
+                        <input type="file" name="ktm1" id="form-input-file" class="custom-file-input" placeholder=""
+                            required>
                         <!-- <span class="req position-absolute">*</span> -->
                     </div>
                 </div>
                 <p class="form-limit text-start ms-4 fw-bold">Kartu Identitas Anggota 1 (KTP/SIM/Paspor)</p>
                 <div class="input-form-file position-relative d-flex align-items-center">
-                    <input type="file" name="idcard1" id="form-input-file" class="custom-file-input" placeholder="">
+                    <input type="file" name="idcard1" id="form-input-file" class="custom-file-input" placeholder=""
+                        required>
                     <!-- <span class="req position-absolute">*</span> -->
                 </div>
                 <input type="submit" value="Change" name="submit-anggota-1">

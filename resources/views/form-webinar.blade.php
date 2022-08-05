@@ -81,19 +81,19 @@
                     <span class="req position-absolute">*</span>
                 </div>
                 <div id="share-grub" class="">
-                    <p class="form-limit text-start ms-4 fw-bold">Share Grub 1</p>
+                    <p class="form-limit text-start ms-4 fw-bold">Share Grup 1</p>
                     <div class="input-form-file position-relative d-flex align-items-center">
                         <input type="file" name="sg1" id="form-input-file" class="custom-file-input" placeholder=""
                             required>
                         <span class="req position-absolute">*</span>
                     </div>
-                    <p class="form-limit text-start ms-4 fw-bold">Share Grub 2</p>
+                    <p class="form-limit text-start ms-4 fw-bold">Share Grup 2</p>
                     <div class="input-form-file position-relative d-flex align-items-center">
                         <input type="file" name="sg2" id="form-input-file" class="custom-file-input" placeholder=""
                             required>
                         <span class="req position-absolute">*</span>
                     </div>
-                    <p class="form-limit text-start ms-4 fw-bold">Share Grub 3</p>
+                    <p class="form-limit text-start ms-4 fw-bold">Share Grup 3</p>
                     <div class="input-form-file position-relative d-flex align-items-center">
                         <input type="file" name="sg3" id="form-input-file" class="custom-file-input" placeholder=""
                             required>
@@ -112,19 +112,19 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         function getValue(){
-            let grub = `<p class="form-limit text-start ms-4 fw-bold">Share Grub 1</p>
+            let grub = `<p class="form-limit text-start ms-4 fw-bold">Share Grup 1</p>
                     <div class="input-form-file position-relative d-flex align-items-center">
-                        <input type="file" name="grub-1" id="form-input-file" class="custom-file-input" placeholder=""required>
+                        <input type="file" name="sg1" id="form-input-file" class="custom-file-input" placeholder=""required>
                         <span class="req position-absolute">*</span>
                     </div>
-                    <p class="form-limit text-start ms-4 fw-bold">Share Grub 2</p>
+                    <p class="form-limit text-start ms-4 fw-bold">Share Grup 2</p>
                     <div class="input-form-file position-relative d-flex align-items-center">
-                        <input type="file" name="grub-2" id="form-input-file" class="custom-file-input" placeholder=""required>
+                        <input type="file" name="sg2" id="form-input-file" class="custom-file-input" placeholder=""required>
                         <span class="req position-absolute">*</span>
                     </div>
-                    <p class="form-limit text-start ms-4 fw-bold">Share Grub 3</p>
+                    <p class="form-limit text-start ms-4 fw-bold">Share Grup 3</p>
                     <div class="input-form-file position-relative d-flex align-items-center">
-                        <input type="file" name="grub-3" id="form-input-file" class="custom-file-input" placeholder=""required>
+                        <input type="file" name="sg3" id="form-input-file" class="custom-file-input" placeholder=""required>
                         <span class="req position-absolute">*</span>
                     </div>`;
             let value = $("#instansi").val();
