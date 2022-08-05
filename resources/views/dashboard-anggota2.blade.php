@@ -29,7 +29,7 @@
     </div>
     <div class="main-content d-flex justify-content-center align-items-center">
         <div class="container d-flex flex-column-reverse align-items-center justify-content-around position-relative">
-            @if ($member1)
+            @if ($member2)
             <table id="example" class="table table-striped w-100 text-center" style="width:100%">
                 <thead>
                     <tr>
@@ -44,73 +44,74 @@
                 </thead>
                 <tbody class="text-center">
                     <tr>
-                        <td>Anggota 1</td>
-                        <td>{{ $member1->name }}</td>
-                        <td>{{ $member1->email }}</td>
-                        <td>{{ $member1->agency }}</td>
-                        <td>@if ($member1->agency == 'ums')
-                            @if ($member1->ktm == '-')
-                            {{ $member1->ktm }}
+                        <td>Anggota 2</td>
+                        <td>{{ $member2->name }}</td>
+                        <td>{{ $member2->email }}</td>
+                        <td>{{ $member2->agency }}</td>
+                        <td>@if ($member2->agency == 'ums')
+                            @if ($member2->ktm == '-')
+                            {{ $member2->ktm }}
                             @else
-                            <img src="{{ asset('/storage/'. $member1->ktm) }}" style="width:100px;height:75px;">
+                            <img src="{{ asset('/storage/'. $member2->ktm) }}" style="width:100px;height:75px;">
                             @endif
                             @else
-                            {{ $member1->ktm }}
+                            {{ $member2->ktm }}
                             @endif
                         </td>
-                        <td><img src="{{ asset('/storage/'. $member1->idcard) }}" style="width:100px;height:75px;">
+                        <td><img src="{{ asset('/storage/'. $member2->idcard) }}" style="width:100px;height:75px;">
                         </td>
-                        <td><a href="{{ route('showEditMember1', $member1->id) }}"
+                        <td><a href="{{ route('showEditMember1', $member2->id) }}"
                                 class="btn btn-success text-decoration-none text-white"
                                 onclick="return confirm('Are you sure you want to edit this?')">Edit</a></td>
                     </tr>
                 </tbody>
             </table>
             @endif
-            @if (!$member1)
-            <form action="{{ route('storeMember1') }}" method="POST" class="text-center" enctype="multipart/form-data">
+
+            @if (!$member2)
+            <form action="{{ route('storeMember2') }}" method="POST" class="text-center" enctype="multipart/form-data">
                 @csrf
-                <p class="form-limit text-center ms-4 fw-bold">Identitas Anggota 1</p>
+                <p class="form-limit text-center ms-4 fw-bold">Identitas Anggota 2</p>
                 <div class="input-form position-relative">
                     <p class="label position-absolute">Nama TIM</p>
-                    <input type="text" name="team_name1" id="form-input"
+                    <input type="text" name="team_name2" id="form-input"
                         class="form-input px-4 bg-secondary bg-opacity-10"
                         value="{{ auth()->user()->competition->name }}" required readonly>
                     <span class="req position-absolute">*</span>
                 </div>
                 <div class="input-form position-relative">
-                    <p class="label position-absolute">Email Anggota 1</p>
-                    <input type="email" name="email1" id="form-input" class="form-input px-4" value="" required>
+                    <p class="label position-absolute">Email Anggota 2</p>
+                    <input type="email" name="email2" id="form-input" class="form-input px-4" value="" required>
                     <span class="req position-absolute">*</span>
                 </div>
                 <div class="input-form position-relative">
-                    <p class="label position-absolute">Nama Anggota 1</p>
-                    <input type="text" name="name1" id="form-input" class="form-input px-4" placeholder="" required>
+                    <p class="label position-absolute">Nama Anggota 2</p>
+                    <input type="text" name="name2" id="form-input" class="form-input px-4" placeholder="" required>
                     <span class="req position-absolute">*</span>
                 </div>
                 <div class="input-form position-relative">
-                    <p class="label position-absolute">Instansi Anggota 1</p>
-                    <select class="form-input px-4" name="agency1" id="agency1" onChange="getValue('1')">
+                    <p class="label position-absolute">Instansi Anggota 2</p>
+                    <select class="form-input px-4" name="agency2" id="agency2" onChange="getValue('2')">
                         <option value="ums">Universitas Muhammadiyah Surakarta</option>
                         <option value="umum">Umum</option>
                     </select>
                     <span class="req position-absolute"><i class="fa-solid fa-angle-down"></i></span>
                 </div>
-                <div id="from-ums-1" class="">
-                    <p class="form-limit text-start ms-4 fw-bold">KTM UMS Anggota 1</p>
+                <div id="from-ums-2" class="">
+                    <p class="form-limit text-start ms-4 fw-bold">KTM UMS Anggota 2</p>
                     <div class="input-form-file position-relative d-flex align-items-center">
-                        <input type="file" name="ktm1" id="form-input-file" class="custom-file-input" placeholder=""
+                        <input type="file" name="ktm2" id="form-input-file" class="custom-file-input" placeholder=""
                             required>
                         <!-- <span class="req position-absolute">*</span> -->
                     </div>
                 </div>
-                <p class="form-limit text-start ms-4 fw-bold">Kartu Identitas Anggota 1 (KTP/SIM/Paspor)</p>
+                <p class="form-limit text-start ms-4 fw-bold">Kartu Identitas Anggota 2 (KTP/SIM/Paspor)</p>
                 <div class="input-form-file position-relative d-flex align-items-center">
-                    <input type="file" name="idcard1" id="form-input-file" class="custom-file-input" placeholder=""
+                    <input type="file" name="idcard2" id="form-input-file" class="custom-file-input" placeholder=""
                         required>
                     <!-- <span class="req position-absolute">*</span> -->
                 </div>
-                <input type="submit" value="Save" name="submit-anggota-1">
+                <input type="submit" value="Save" name="submit-anggota-2">
             </form>
             @endif
         </div>

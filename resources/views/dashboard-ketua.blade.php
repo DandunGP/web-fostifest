@@ -114,7 +114,7 @@
                         required>
                     <!-- <span class="req position-absolute">*</span> -->
                 </div>
-                <input type="submit" value="Change" name="submit">
+                <input type="submit" value="Save" name="submit">
             </form>
         </div>
     </div>

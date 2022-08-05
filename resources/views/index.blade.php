@@ -69,20 +69,7 @@
                         <path d="M11.66 12.4L14.56 13.14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
                             stroke-linejoin="round" />
                     </svg>
-                    GUIDE BOOK
-                </a>
-                <a href="#scroll" class="menu-nav text-decoration-none text-black">
-                    <svg class="pr-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M8.89844 7.56023C9.20844 3.96023 11.0584 2.49023 15.1084 2.49023H15.2384C19.7084 2.49023 21.4984 4.28023 21.4984 8.75023V15.2702C21.4984 19.7402 19.7084 21.5302 15.2384 21.5302H15.1084C11.0884 21.5302 9.23844 20.0802 8.90844 16.5402"
-                            stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M2 12H14.88" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M12.6484 8.65039L15.9984 12.0004L12.6484 15.3504" stroke="#292D32" stroke-width="1.5"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    REGISTRATION
+                    RULEBOOK
                 </a>
                 <a href="{{ route('login-page') }}" class="menu-nav text-decoration-none text-black">
                     <svg class="pr-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -132,20 +119,7 @@
                     <path d="M11.66 12.4L14.56 13.14" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
                         stroke-linejoin="round" />
                 </svg>
-                GUIDE BOOK
-            </a>
-            <a href="#scroll" class="menu-nav text-decoration-none text-black">
-                <svg class="pr-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M8.89844 7.56023C9.20844 3.96023 11.0584 2.49023 15.1084 2.49023H15.2384C19.7084 2.49023 21.4984 4.28023 21.4984 8.75023V15.2702C21.4984 19.7402 19.7084 21.5302 15.2384 21.5302H15.1084C11.0884 21.5302 9.23844 20.0802 8.90844 16.5402"
-                        stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M2 12H14.88" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    <path d="M12.6484 8.65039L15.9984 12.0004L12.6484 15.3504" stroke="#292D32" stroke-width="1.5"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                REGISTRATION
+                RULEBOOK
             </a>
             <a href="{{ route('login-page') }}" class="menu-nav text-decoration-none text-black">
                 <svg class="pr-1" width="24" height="24" viewBox="0 0 24 24" fill="none"

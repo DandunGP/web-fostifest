@@ -20,7 +20,7 @@ class checkAdmin
         if (Auth::user()->status === 'Admin') {
             return $next($request);
         } else {
-            return redirect('/dashboard-peserta');
+            return redirect('/dashboard-peserta/ketua');
         }
     }
 }

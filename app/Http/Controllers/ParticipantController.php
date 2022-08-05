@@ -36,8 +36,12 @@ class ParticipantController extends Controller
     public function teamMember()
     {
         $member1 = Member1::where('competition_id', auth()->user()->competition->id)->first();
+        return view('dashboard-anggota', ['member1' => $member1]);
+    }
+    public function teamMember2()
+    {
         $member2 = Member2::where('competition_id', auth()->user()->competition->id)->first();
-        return view('dashboard-anggota', ['member1' => $member1, 'member2' => $member2]);
+        return view('dashboard-anggota2', ['member2' => $member2]);
     }
 
     public function guideline()
@@ -117,7 +121,7 @@ class ParticipantController extends Controller
             'competition_id' => auth()->user()->competition->id
         ]);
 
-        return redirect('/dashboard-peserta/anggota');
+        return redirect('/dashboard-peserta/anggota1');
     }
 
     public function storeMember2(Request $request)
@@ -154,7 +158,7 @@ class ParticipantController extends Controller
             'competition_id' => auth()->user()->competition->id
         ]);
 
-        return redirect('/dashboard-peserta/anggota');
+        return redirect('/dashboard-peserta/anggota2');
     }
 
     // Leader
@@ -266,7 +270,7 @@ class ParticipantController extends Controller
             'idcard' => $idCard,
         ]);
 
-        return redirect('/dashboard-peserta/anggota');
+        return redirect('/dashboard-peserta/anggota1');
     }
 
     // Member2
@@ -322,7 +326,7 @@ class ParticipantController extends Controller
             'idcard' => $idCard,
         ]);
 
-        return redirect('/dashboard-peserta/anggota');
+        return redirect('/dashboard-peserta/anggota2');
     }
 
     public function export()

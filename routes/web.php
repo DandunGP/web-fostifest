@@ -56,11 +56,12 @@ Route::post('/competition', [CompetitionController::class, 'store'])->name('regi
 Route::get('/dashboard-peserta', [ParticipantController::class, 'dashboard'])->name('dashboardCompetition')->middleware('auth', 'checkParticipant');
 Route::get('/dashboard-peserta/tim', [ParticipantController::class, 'team'])->name('team')->middleware('auth', 'checkParticipant');
 Route::get('/dashboard-peserta/ketua', [ParticipantController::class, 'teamLeader'])->name('leaderTeam')->middleware('auth', 'checkParticipant');
-Route::get('/dashboard-peserta/anggota', [ParticipantController::class, 'teamMember'])->name('memberTeam')->middleware('auth', 'checkParticipant');
+Route::get('/dashboard-peserta/anggota1', [ParticipantController::class, 'teamMember'])->name('memberTeam')->middleware('auth', 'checkParticipant');
+Route::get('/dashboard-peserta/anggota2', [ParticipantController::class, 'teamMember2'])->name('memberTeam2')->middleware('auth', 'checkParticipant');
 Route::get('/dashboard-peserta/guideline', [ParticipantController::class, 'guideline'])->name('guidelineTeam')->middleware('auth', 'checkParticipant');
 Route::post('/dashboard-peserta/ketua', [ParticipantController::class, 'storeLeader'])->name('storeLeader')->middleware('auth', 'checkParticipant');
-Route::post('/dashboard-peserta/anggota/1', [ParticipantController::class, 'storeMember1'])->name('storeMember1')->middleware('auth', 'checkParticipant');
-Route::post('/dashboard-peserta/anggota/2', [ParticipantController::class, 'storeMember2'])->name('storeMember2')->middleware('auth', 'checkParticipant');
+Route::post('/dashboard-peserta/anggota1/add', [ParticipantController::class, 'storeMember1'])->name('storeMember1')->middleware('auth', 'checkParticipant');
+Route::post('/dashboard-peserta/anggota2/add', [ParticipantController::class, 'storeMember2'])->name('storeMember2')->middleware('auth', 'checkParticipant');
 Route::get('/dashboard-peserta/ketua/edit/{leader}', [ParticipantController::class, 'showEditLeader'])->name('showEditLeader')->middleware('auth', 'checkParticipant');
 Route::get('/dashboard-peserta/anggota/1/edit/{member1}', [ParticipantController::class, 'showEditMember1'])->name('showEditMember1')->middleware('auth', 'checkParticipant');
 Route::get('/dashboard-peserta/anggota/2/edit/{member2}', [ParticipantController::class, 'showEditMember2'])->name('showEditMember2')->middleware('auth', 'checkParticipant');

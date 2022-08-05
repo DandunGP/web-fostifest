@@ -15,6 +15,8 @@
 </ul>
 <p>2. Mengisi data diri team.</p>
 <p>3. Bergabung grup WhatsApp melalui link berikut : https://chat.whatsapp.com/HCyKvgqhXcDJtrAo4jLpEK</p>
+
+<p><span style="font-weight:1000">NB : Untuk pengisian data diri disarankan menggunakan Laptop atau PC</span></p>
 <p>Salam,</p>
 <p>Fostifest</p>
 @endcomponent

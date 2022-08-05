@@ -1,4 +1,4 @@
-<section id="navbar" class="position-absolute">
+<section id="navbar" class="position-absolute active">
     <div class="container">
         <div class="nav-menu d-flex align-items-center justify-content-center">
             <img src="{{ asset('asset/logo.png') }}" width="40" class="logo-nav">
@@ -19,7 +19,13 @@
             <a href="{{ route('memberTeam') }}"
                 class="text-decoration-none w-100 my-1 {{ Route::is('memberTeam') ? 'nav-active' : '' }}">
                 <div class="nav-item text-white text-start">
-                    <p>Anggota</p>
+                    <p>Anggota 1</p>
+                </div>
+            </a>
+            <a href="{{ route('memberTeam2') }}"
+                class="text-decoration-none w-100 my-1 {{ Route::is('memberTeam2') ? 'nav-active' : '' }}">
+                <div class="nav-item text-white text-start">
+                    <p>Anggota 2</p>
                 </div>
             </a>
         </div>
@@ -27,7 +33,7 @@
             <a href="{{ route('guidelineTeam') }}"
                 class="text-decoration-none w-100 my-1 {{ Route::is('guidelineTeam') ? 'nav-active' : '' }}">
                 <div class="nav-item text-white text-start">
-                    <p>Guideline book</p>
+                    <p>Rulebook</p>
                 </div>
             </a>
         </div>
