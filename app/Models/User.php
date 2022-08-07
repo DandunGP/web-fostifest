@@ -49,6 +49,11 @@ class User extends Authenticatable
         return $this->hasOne(Competition::class);
     }
 
+    public function login_activities()
+    {
+        return $this->hasMany(LoginActivity::class, 'user_id', 'id');
+    }
+
     // Menghilangkan Hash
 
     // public function getAuthPassword()
