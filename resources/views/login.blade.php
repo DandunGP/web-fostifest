@@ -21,29 +21,33 @@
         rel="stylesheet">
 </head>
 
-<body class="d-flex justify-content-center align-items-center">
-    <div class="wrap-form px-5 py-5 rounded bg-white">
-        <form action="{{ route('authenticate') }}" method="POST" class="text-center">
-            @csrf
-            <img src="asset/logo.png" width="100" class="logo-form">
-            <h1 class="text-center">Sign in to FOSTIFEST</h1>
-            @if(session()->has('loginError'))
-            <p class="text-danger">{{ session('loginError') }}</p>
-            @else
-            <p class="text-center">Input username and password to sign in</p>
-            @endif
-            <input type="text" name="username" class="@error('username', 'post') is-invalid @enderror"
-                placeholder="Username" id="username" autocomplete="off" required>
-            @error('username')
-            <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
-            <input type="password" name="password" class="@error('password', 'post') is-invalid @enderror"
-                placeholder="Password" id="password" autocomplete="off" required>
-            @error('password')
-            <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
-            <input type="submit" value="Sign in" name="signin" class="button-submit">
-        </form>
+<body>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="wrap-form rounded bg-white">
+            <form action="{{ route('authenticate') }}" method="POST" class="text-center">
+                @csrf
+                <img src="asset/logo.png" width="100" class="logo-form">
+                <h1 class="text-center">Sign in to FOSTIFEST</h1>
+                @if(session()->has('loginError'))
+                <p class="text-danger">{{ session('loginError') }}</p>
+                @else
+                <p class="text-center">Input username and password to sign in</p>
+                @endif
+                <div class="input-container">
+                    <input type="text" name="username" class="@error('username', 'post') is-invalid @enderror"
+                        placeholder="Username" id="username" autocomplete="off" required>
+                    @error('username')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                    <input type="password" name="password" class="@error('password', 'post') is-invalid @enderror"
+                        placeholder="Password" id="password" autocomplete="off" required>
+                    @error('password')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                    <input type="submit" value="Sign in" name="signin" class="button-submit">
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 
