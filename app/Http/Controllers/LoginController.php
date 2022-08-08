@@ -26,7 +26,7 @@ class LoginController extends Controller
         $blockedTimeFromLogin = 0;
 
         if ($user) {
-            $userLoginActivities = $user->login_activities()->limit(3)->orderBy('created_at', 'desc')->get();
+            $userLoginActivities = $user->login_activities()->limit(5)->orderBy('created_at', 'desc')->get();
             $latestLoginActivity = $userLoginActivities->first();
             $blockLoginAttempts = 5;
             $isAttemptsBlocked = false;
@@ -39,10 +39,10 @@ class LoginController extends Controller
                 $datetimeNow = new DateTime();
 
                 $timestampInterval = $latestActivityTime->getTimestamp() - $endActivityTime->getTimestamp();
-                $blockLoginInterval = 60*10; // 10 minutes interval login attempt before user blocked from login
+                $blockLoginInterval = 60 * 10; // 10 minutes interval login attempt before user blocked from login
                 $isLoginAttemptReached = $timestampInterval <= $blockLoginInterval;
 
-                $blockTime = 60*15; // 15 minutes block user from login
+                $blockTime = 60 * 15; // 15 minutes block user from login
                 $blockTimeRemaining = $datetimeNow->getTimestamp() - $latestActivityTime->getTimestamp();
                 $isUserBlockedFromLogin = $blockTimeRemaining <= $blockTime;
 
@@ -51,8 +51,8 @@ class LoginController extends Controller
                     $isAttemptsBlocked = true;
                 }
             }
-            
-            foreach($userLoginActivities as $loginActivity) {
+
+            foreach ($userLoginActivities as $loginActivity) {
                 if (boolval($loginActivity->is_successful)) {
                     $isSuccessLoginDetected = true;
                 }
@@ -75,7 +75,7 @@ class LoginController extends Controller
     }
 
     private function saveLoginActivity(Request $request, $user, bool $isSuccessful)
-    {        
+    {
         if ($user) {
             $loginActivity = new LoginActivity();
             $loginActivity->user_id = $user->id;

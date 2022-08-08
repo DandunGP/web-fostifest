@@ -20,7 +20,8 @@ return new class extends Migration
             $table->string('email');
             $table->string('payment');
             $table->foreignIdFor(User::class)->nullable();
-            $table->timestamps();
+            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamp('created_at')->useCurrent();
         });
     }
 

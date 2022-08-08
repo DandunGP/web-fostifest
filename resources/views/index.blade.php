@@ -29,7 +29,7 @@
             Sekarang batch ke-1 Pembayaran Webinar Rp.50.000,00,- Lomba Rp. 60.000,00,-
         </p>
     </section> --}}
-    
+
     <section id="navbar" class="sticky-top">
         <div class="container">
             <div class="nav-container">
@@ -58,8 +58,8 @@
                                 stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M3 16V15C8.84 16.95 15.16 16.95 21 15V16" stroke="#292D32" stroke-width="1.5"
                                 stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M3 8.99998C8.84 7.04998 15.16 7.04998 21 8.99998" stroke="#292D32" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 8.99998C8.84 7.04998 15.16 7.04998 21 8.99998" stroke="#292D32"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                         FOSTI UMS
                     </a>
@@ -87,8 +87,8 @@
                                 stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M2 12H14.88" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
                                 stroke-linejoin="round" />
-                            <path d="M12.6484 8.65039L15.9984 12.0004L12.6484 15.3504" stroke="#292D32" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12.6484 8.65039L15.9984 12.0004L12.6484 15.3504" stroke="#292D32"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                         LOGIN
                     </a>
@@ -145,7 +145,16 @@
             </a>
         </div>
     </section>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p align="center"><img src="asset/image-lock.png" style="width:200px;"></p>
+            <p align="center" style="margin-top:10px;"> Terimakasih sudah mendaftar.</p>
+            <p align="center" style="margin-top:10px;"> Untuk informasi selanjutnya dapat di cek pada email masing
+                masing 1 x 24 jam</p>
+        </div>
 
+    </div>
     <section id="banner" class="d-flex align-items-center">
         <div class="container d-flex flex-column-reverse flex-lg-row" data-aos="fade-up" data-aos-duration="1500">
             <div class="text-banner">
@@ -162,7 +171,7 @@
             </div>
         </div>
     </section>
-    
+
     <section id="main">
         <div class="webinar" data-aos="fade-up" data-aos-duration="1000">
             <div class="container">
@@ -172,10 +181,13 @@
                     <p class="main-subtitle">
                         Webinar nasional dengan tema “Upgrade Your Digital Security” (Tingkatkan
                         Keamanan Digital Anda). Menghadirkan <span class="fw-bold">Redho Maland</span> sebagai Cyber
-                        Security Consultant & Instructor, akan membahas bagaimana meningkatkan keamanan digital. <br><br>
-                        <span class="fw-bold">*Webinar Rp 20.000 (FREE untuk Mahasiswa Universitas Muhammadiyah Surakarta)</span>
+                        Security Consultant & Instructor, akan membahas bagaimana meningkatkan keamanan digital.
+                        <br><br>
+                        <span class="fw-bold">*Webinar Rp 20.000 (FREE untuk Mahasiswa Universitas Muhammadiyah
+                            Surakarta)</span>
                     </p>
-                    <a href="{{ route('webinar') }}" class="main-button btn px-2 py-1 text-decoration-none d-inline-block">Daftar Webinar</a>
+                    <a href="{{ route('webinar') }}"
+                        class="main-button btn px-2 py-1 text-decoration-none d-inline-block">Daftar Webinar</a>
                 </div>
                 <div class="image-webinar">
                     <img src="asset/webinar-1.png">
@@ -196,7 +208,8 @@
                         sebuah file atau string yang sudah disembunyikan sistem yang dimana disebut dengan istilah
                         “Flag”.</p>
                     <p class="fw-bold">*Pendaftaran lomba batch 1 Rp 80.000 (FREE Webinar bagi pendaftar lomba)</p>
-                    <a href="{{ route('competition') }}" class="main-button btn px-2 py-1 text-decoration-none d-inline-block">Daftar Lomba</a>
+                    <a href="{{ route('competition') }}"
+                        class="main-button btn px-2 py-1 text-decoration-none d-inline-block">Daftar Lomba</a>
                 </div>
             </div>
         </div>
@@ -287,6 +300,23 @@
             once: true
         });
     </script>
+    @if(session()->has('success'))
+    <script>
+        var modal = document.getElementById("myModal");
+        var span = document.getElementsByClassName("close")[0];
+        modal.style.display = "block";
+            
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+            
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    @endif
 </body>
 
 </html>

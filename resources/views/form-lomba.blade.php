@@ -46,6 +46,9 @@
             <p class="form-subtitle text-center">Seluruh informasi yang ada di dalam form bersifat rahasia dan tanda
                 <span>*</span> wajib untuk diisi.
             </p>
+            @if(session()->has('emailError'))
+            <p class="text-danger">{{ session('emailError') }}</p>
+            @endif
             <form action="{{ route('registrationComp') }}" method="POST" class="text-center"
                 enctype="multipart/form-data">
                 @csrf

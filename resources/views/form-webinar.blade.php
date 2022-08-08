@@ -49,6 +49,9 @@
             <form action="{{ route('registrationWebinar') }}" method="POST" class="text-center" id="wrap-from"
                 enctype="multipart/form-data">
                 @csrf
+                @if(session()->has('emailError'))
+                <p class="text-danger">{{ session('emailError') }}</p>
+                @endif
                 <p class="form-limit text-start ms-4 fw-bold">IDENTITAS</p>
                 <div class="input-form position-relative">
                     <p class="label position-absolute">Nama Lengkap</p>
