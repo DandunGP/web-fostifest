@@ -1,6 +1,7 @@
 body {
     width: 100%;    
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 #navbar {
@@ -113,14 +114,14 @@ body {
     color: #4D4D4D;
 }
 
-.text-banner {
-    width: 85%;
+.text-banner {    
     padding: 0.8rem;
-    position: absolute;
+    position: relative;
     background-color: white;
 }
 
 .image-banner {
+    display: none;
     z-index: -1;
 }
 
@@ -306,6 +307,7 @@ body {
     }
     
     .image-banner {
+        display: block;
         position: relative;
         width: 38%; 
         height: 32rem;   
