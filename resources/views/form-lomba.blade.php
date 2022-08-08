@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <section id="form-webinar" class="d-flex">
+    <section id="form-webinar">
         <div class="form-webinar-image">
             <div class="background-container">
                 <img src="asset/bg-form.png" alt="Background">

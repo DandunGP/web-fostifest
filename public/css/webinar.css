@@ -6,7 +6,8 @@
 }
 
 #form-webinar {
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
 .form-webinar-image {
@@ -168,16 +169,18 @@
 
 @media screen and (min-width: 1024px) {
     #form-webinar {
-        display: flex;
-        justify-content: center;
+        display: block;
     }
 
     .form-webinar-image {
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
+        position: fixed;
         overflow: hidden;
+        left: 0;
+        top: 0;
+        bottom: 0;
         width: 33%;
         height: 100vh;
     }
@@ -207,7 +210,8 @@
     .form-webinar-form {
         display: flex;
         justify-content: center;
-        width: 67%;        
+        margin-left: calc(100vw - 67%);
+        width: 67%;
     }
 
     .form-webinar-form .container {
