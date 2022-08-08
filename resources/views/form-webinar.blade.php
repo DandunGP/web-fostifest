@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/webinar.css') }}">
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,20 +23,24 @@
 
 <body id="form-webinar" class="position-relative">
     <section class="d-flex">
-        <div class="form-webinar-image d-none d-lg-flex justify-content-center align-items-center position-relative">
-            <img src="asset/bg-form.png" alt="">
-            <img src="asset/image-lock.png" class="position-absolute">
+        <div class="form-webinar-image">
+            <div class="background-container">
+                <img src="asset/bg-form.png" alt="Background">
+            </div>
+            <div class="logo-container">
+                <img src="asset/image-lock.png">
+            </div>
             <div class="form-sosmed position-absolute d-flex flex-column align-items-center">
                 <p class="form-sosmed-title">Find Us On</p>
                 <div class="form-sosmed-image">
-                    <a href="#" class="text-decoration-none">
-                        <img src="asset/instagram.png" alt="">
+                    <a href="https://www.instagram.com/fosti_ums/" class="text-decoration-none">
+                        <img src="asset/instagram.png" alt="Instagram">
                     </a>
-                    <a href="#" class="text-decoration-none">
-                        <img src="asset/twitter.png" alt="">
+                    <a href="https://github.com/FOSTI-UMS" class="text-decoration-none">
+                        <img src="asset/github.png" alt="Github">
                     </a>
-                    <a href="#" class="text-decoration-none">
-                        <img src="asset/whatsapp.png" alt="">
+                    <a href="https://chat.whatsapp.com/E6sCVayTopBHMLlVAj1CSv" class="text-decoration-none">
+                        <img src="asset/whatsapp.png" alt="WhatsApp">
                     </a>
                 </div>
             </div>
@@ -46,12 +50,12 @@
             <p class="form-subtitle text-center">Seluruh informasi yang ada di dalam form bersifat rahasia dan tanda
                 <span>*</span> wajib untuk diisi.
             </p>
+            @if(session()->has('emailError'))
+            <p class="text-danger">{{ session('emailError') }}</p>
+            @endif
             <form action="{{ route('registrationWebinar') }}" method="POST" class="text-center" id="wrap-from"
                 enctype="multipart/form-data">
                 @csrf
-                @if(session()->has('emailError'))
-                <p class="text-danger">{{ session('emailError') }}</p>
-                @endif
                 <p class="form-limit text-start ms-4 fw-bold">IDENTITAS</p>
                 <div class="input-form position-relative">
                     <p class="label position-absolute">Nama Lengkap</p>

@@ -23,10 +23,9 @@ class LoginController extends Controller
         ]);
 
         $user = User::where('username', $credentials['username'])->first();
-        $blockedTimeFromLogin = 0;
 
         if ($user) {
-            $userLoginActivities = $user->login_activities()->limit(5)->orderBy('created_at', 'desc')->get();
+            $userLoginActivities = $user->login_activities()->limit(3)->orderBy('created_at', 'desc')->get();
             $latestLoginActivity = $userLoginActivities->first();
             $blockLoginAttempts = 5;
             $isAttemptsBlocked = false;
@@ -47,7 +46,6 @@ class LoginController extends Controller
                 $isUserBlockedFromLogin = $blockTimeRemaining <= $blockTime;
 
                 if ($isLoginAttemptReached && $isUserBlockedFromLogin) {
-                    $blockedTimeFromLogin = $blockTimeRemaining;
                     $isAttemptsBlocked = true;
                 }
             }
@@ -59,7 +57,7 @@ class LoginController extends Controller
             }
 
             if ($isAttemptsBlocked && !$isSuccessLoginDetected) {
-                return back()->with('loginError', "Sorry, to many attempts! $blockedTimeFromLogin");
+                return back()->with('loginError', "Sorry, to many attempts!");
             }
         }
 
