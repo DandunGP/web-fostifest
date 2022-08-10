@@ -22,13 +22,5 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        $users = [
-            [
-                'username' => 'fostifestadmin',
-                'password' => Hash::make('penguincarnivora22'),
-                'status' => 'Admin'
-            ],
-        ];
-        User::insert($users);
     }
 }
