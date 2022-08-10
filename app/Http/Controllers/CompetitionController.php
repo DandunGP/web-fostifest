@@ -49,7 +49,7 @@ class CompetitionController extends Controller
 
     public function downloadRule()
     {
-        $file = "rulebook/RULEBOOK_CAPTURE_THE_FLAG_FOSTIFEST_2022.pdf";
+        $file = "rulebook/RULEBOOK_CTF_FOSTIFEST_2022.pdf";
         return response()->download($file);
     }
 }

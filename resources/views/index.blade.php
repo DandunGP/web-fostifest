@@ -155,7 +155,7 @@
         </div>
 
     </div>
-    <section id="banner" class="d-flex align-items-center">
+    <section id="banner" class="d-flex align-items-center title-banner">
         <div class="container d-flex flex-column-reverse flex-lg-row" data-aos="fade-up" data-aos-duration="1500">
             <div class="text-banner">
                 <h1 class="banner-title">Cyber Security for Public Safety.</h1>
@@ -207,7 +207,7 @@
                         satu jenis dari kompetisi hacking yang dimana mengharuskan seorang atau tim untuk mengambil
                         sebuah file atau string yang sudah disembunyikan sistem yang dimana disebut dengan istilah
                         “Flag”.</p>
-                    <p class="fw-bold">*Pendaftaran lomba batch 1 Rp 80.000 (FREE Webinar bagi pendaftar lomba)</p>
+                    <p class="fw-bold">*Pendaftaran lomba batch 1 Rp 70.000 (FREE Webinar bagi pendaftar lomba)</p>
                     <a href="{{ route('competition') }}"
                         class="main-button btn px-2 py-1 text-decoration-none d-inline-block">Daftar Lomba</a>
                 </div>
@@ -231,9 +231,9 @@
         </div>
         <div class="wrap-media" data-aos="fade-up" data-aos-duration="1000">
             <div class="container text-center d-flex flex-column align-items-center">
-                <h1 class="media-title">Media Patner</h1>
+                <h1 class="media-title">Media Partner</h1>
                 <div class="media-logo d-flex flex-wrap justify-content-around align-items-center w-75">
-                    <h1>Open Media Patner</h1>
+                    <h1>Open Media Partner</h1>
                 </div>
             </div>
         </div>
