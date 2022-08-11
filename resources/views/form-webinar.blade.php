@@ -46,69 +46,76 @@
             </div>
         </div>
         <div class="form-webinar-form d-flex flex-column align-items-center">
-            <h1 class="form-title">Form Pendaftaran Webinar</h1>
-            <p class="form-subtitle text-center">Seluruh informasi yang ada di dalam form bersifat rahasia dan tanda
-                <span>*</span> wajib untuk diisi.
-            </p>
-            @if(session()->has('emailError'))
-            <p class="text-danger">{{ session('emailError') }}</p>
-            @endif
-            <form action="{{ route('registrationWebinar') }}" method="POST" class="text-center" id="wrap-from"
-                enctype="multipart/form-data">
-                @csrf
-                <p class="form-limit text-start ms-4 fw-bold">IDENTITAS</p>
-                <div class="input-form position-relative">
-                    <p class="label position-absolute">Nama Lengkap</p>
-                    <input type="text" name="fullname" id="form-input" class="form-input px-4" placeholder="" required>
-                    <span class="req position-absolute">*</span>
-                </div>
-                <div class="input-form position-relative">
-                    <p class="label position-absolute">Email</p>
-                    <input type="email" name="email" id="form-input" class="form-input px-4" placeholder="" required>
-                    <span class="req position-absolute">*</span>
-                </div>
-                <div class="input-form position-relative">
-                    <p class="label position-absolute">Nomor Whatsapp</p>
-                    <input type="number" name="wa" id="form-input" class="form-input px-4" placeholder="" required>
-                    <span class="req position-absolute">*</span>
-                </div>
-                <div class="input-form position-relative">
-                    <p class="label position-absolute">Instansi</p>
-                    <select class="form-input px-4" name="agency" id="instansi" onChange="getValue()">
-                        <option value="ums">Universitas Muhammadiyah Surakarta</option>
-                        <option value="umum">Umum</option>
-                    </select>
-                    <span class="req position-absolute"><i class="fa-solid fa-angle-down"></i></span>
-                </div>
-                <p class="form-limit text-start ms-4 fw-bold" id="change-bukti">KTM Universitas Muhammadiyah Surakarta
+            <div class="container">
+                <h1 class="form-title">Form Pendaftaran Webinar</h1>
+                <p class="form-subtitle text-center">Seluruh informasi yang ada di dalam form bersifat rahasia dan tanda
+                    <span>*</span> wajib untuk diisi.
                 </p>
-                <div class="input-form-file position-relative d-flex align-items-center">
-                    <input type="file" name="payment" id="form-input-file" class="custom-file-input" placeholder=""
-                        required>
-                    <span class="req position-absolute">*</span>
-                </div>
-                <div id="share-grub" class="">
-                    <p class="form-limit text-start ms-4 fw-bold">Share Grup 1</p>
-                    <div class="input-form-file position-relative d-flex align-items-center">
-                        <input type="file" name="sg1" id="form-input-file" class="custom-file-input" placeholder=""
+                @if(session()->has('emailError'))
+                <p class="text-danger">{{ session('emailError') }}</p>
+                @endif
+                <form action="{{ route('registrationWebinar') }}" method="POST" class="text-center" id="wrap-from"
+                    enctype="multipart/form-data">
+                    @csrf
+                    <p class="form-limit text-start ms-4 fw-bold">IDENTITAS</p>
+                    <div class="input-form position-relative">
+                        <p class="label position-absolute">Nama Lengkap</p>
+                        <input type="text" name="fullname" id="form-input" class="form-input px-4" placeholder=""
                             required>
                         <span class="req position-absolute">*</span>
                     </div>
-                    <p class="form-limit text-start ms-4 fw-bold">Share Grup 2</p>
-                    <div class="input-form-file position-relative d-flex align-items-center">
-                        <input type="file" name="sg2" id="form-input-file" class="custom-file-input" placeholder=""
+                    <div class="input-form position-relative">
+                        <p class="label position-absolute">Email</p>
+                        <input type="email" name="email" id="form-input" class="form-input px-4" placeholder=""
                             required>
                         <span class="req position-absolute">*</span>
                     </div>
-                    <p class="form-limit text-start ms-4 fw-bold">Share Grup 3</p>
+                    <div class="input-form position-relative">
+                        <p class="label position-absolute">Nomor Whatsapp</p>
+                        <input type="number" name="wa" id="form-input" class="form-input px-4" placeholder="" required>
+                        <span class="req position-absolute">*</span>
+                    </div>
+                    <div class="input-form position-relative">
+                        <p class="label position-absolute">Instansi</p>
+                        <select class="form-input px-4" name="agency" id="instansi" onChange="getValue()">
+                            <option value="ums">Universitas Muhammadiyah Surakarta</option>
+                            <option value="umum">Umum</option>
+                        </select>
+                        <span class="req position-absolute"><i class="fa-solid fa-angle-down"></i></span>
+                    </div>
+                    <p class="form-limit text-start ms-4 fw-bold" id="change-bukti">KTM Universitas Muhammadiyah
+                        Surakarta
+                    </p>
                     <div class="input-form-file position-relative d-flex align-items-center">
-                        <input type="file" name="sg3" id="form-input-file" class="custom-file-input" placeholder=""
+                        <input type="file" name="payment" id="form-input-file" class="custom-file-input" placeholder=""
                             required>
                         <span class="req position-absolute">*</span>
                     </div>
-                </div>
-                <input type="submit" value="Kirim" name="submit" class="button-submit">
-            </form>
+                    <div id="change">
+                    </div>
+                    <div id="share-grub" class="">
+                        <p class="form-limit text-start ms-4 fw-bold">Share Pamflet (Grup Whatsapp / Telegram) 1</p>
+                        <div class="input-form-file position-relative d-flex align-items-center">
+                            <input type="file" name="sg1" id="form-input-file" class="custom-file-input" placeholder=""
+                                required>
+                            <span class="req position-absolute">*</span>
+                        </div>
+                        <p class="form-limit text-start ms-4 fw-bold">Share Pamflet (Grup Whatsapp / Telegram) 2</p>
+                        <div class="input-form-file position-relative d-flex align-items-center">
+                            <input type="file" name="sg2" id="form-input-file" class="custom-file-input" placeholder=""
+                                required>
+                            <span class="req position-absolute">*</span>
+                        </div>
+                        <p class="form-limit text-start ms-4 fw-bold">Share Pamflet (Grup Whatsapp / Telegram) 3</p>
+                        <div class="input-form-file position-relative d-flex align-items-center">
+                            <input type="file" name="sg3" id="form-input-file" class="custom-file-input" placeholder=""
+                                required>
+                            <span class="req position-absolute">*</span>
+                        </div>
+                    </div>
+                    <input type="submit" value="Kirim" name="submit" class="button-submit">
+                </form>
+            </div>
         </div>
     </section>
     <!-- Font Awesome -->
@@ -134,16 +141,19 @@
                         <input type="file" name="sg3" id="form-input-file" class="custom-file-input" placeholder=""required>
                         <span class="req position-absolute">*</span>
                     </div>`;
+            let metode = '<p class="fst-italic fw-bold mt-4">Metode pembayaran tertera di rulebook</p>';
             let value = $("#instansi").val();
             let instansi;
             let file;
             if(value == 'ums'){
                 instansi = 'KTM Universitas Muhammadiyah Surakarta'
                 $("#share-grub").html(grub);
+                $("#change").text("");
                 // $("#share-grub").show();
             } else{
                 instansi = 'Bukti Pembayaran'
                 $("#share-grub").text("");
+                $("#change").html(metode);
                 // $("#share-grub").hide();
             }
             $("#change-bukti").text(instansi);

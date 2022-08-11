@@ -53,6 +53,7 @@
                         <th>Grub 3</th>
                         <th>Pembayaran</th>
                         <th>Setting</th>
+                        <th>Validasi</th>
                     </tr>
                 </thead>
                 <tbody class="text-center">
@@ -93,6 +94,13 @@
                                 <button type="submit" class="btn btn-success text-decoration-none text-white">Kirim
                                     Email</button>
                             </form>
+                        </td>
+                        <td>
+                            @if($wb->send_email != null)
+                            Done
+                            @else
+                            -
+                            @endif
                         </td>
                     </tr>
                     @endforeach

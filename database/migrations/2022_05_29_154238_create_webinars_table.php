@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('sg_2');
             $table->string('sg_3');
             $table->string('payment');
+            $table->string('send_email')->nullable();
             $table->timestamps();
         });
     }

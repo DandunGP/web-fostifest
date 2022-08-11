@@ -46,35 +46,39 @@
             </div>
         </div>
         <div class="form-webinar-form d-flex flex-column align-items-center">
-            <h1 class="form-title">Form Pendaftaran Lomba Capture The Flag</h1>
-            <p class="form-subtitle text-center">Seluruh informasi yang ada di dalam form bersifat rahasia dan tanda
-                <span>*</span> wajib untuk diisi.
-            </p>
-            @if(session()->has('emailError'))
-            <p class="text-danger">{{ session('emailError') }}</p>
-            @endif
-            <form action="{{ route('registrationComp') }}" method="POST" class="text-center"
-                enctype="multipart/form-data">
-                @csrf
-                <p class="form-limit text-start ms-4 fw-bold">IDENTITAS TIM</p>
-                <div class="input-form position-relative">
-                    <p class="label position-absolute">Nama TIM</p>
-                    <input type="text" name="name" id="form-input" class="form-input px-4" placeholder="" required>
-                    <span class="req position-absolute">*</span>
-                </div>
-                <div class="input-form position-relative">
-                    <p class="label position-absolute">Email</p>
-                    <input type="email" name="email" id="form-input" class="form-input px-4" placeholder="" required>
-                    <span class="req position-absolute">*</span>
-                </div>
-                <p class="form-limit text-start ms-4 fw-bold">Bukti Pembayaran</p>
-                <div class="input-form-file position-relative d-flex align-items-center">
-                    <input type="file" name="payment" id="form-input-file" class="custom-file-input" placeholder=""
-                        required>
-                    <span class="req position-absolute">*</span>
-                </div>
-                <input type="submit" value="Kirim" name="submit">
-            </form>
+            <div class="container">
+                <h1 class="form-title">Form Pendaftaran Lomba Capture The Flag</h1>
+                <p class="form-subtitle text-center">Seluruh informasi yang ada di dalam form bersifat rahasia dan tanda
+                    <span>*</span> wajib untuk diisi.
+                </p>
+                @if(session()->has('emailError'))
+                <p class="text-danger">{{ session('emailError') }}</p>
+                @endif
+                <form action="{{ route('registrationComp') }}" method="POST" class="text-center"
+                    enctype="multipart/form-data">
+                    @csrf
+                    <p class="form-limit text-start ms-4 fw-bold">IDENTITAS TIM</p>
+                    <div class="input-form position-relative">
+                        <p class="label position-absolute">Nama TIM</p>
+                        <input type="text" name="name" id="form-input" class="form-input px-4" placeholder="" required>
+                        <span class="req position-absolute">*</span>
+                    </div>
+                    <div class="input-form position-relative">
+                        <p class="label position-absolute">Email</p>
+                        <input type="email" name="email" id="form-input" class="form-input px-4" placeholder=""
+                            required>
+                        <span class="req position-absolute">*</span>
+                    </div>
+                    <p class="form-limit text-start ms-4 fw-bold">Bukti Pembayaran</p>
+                    <div class="input-form-file position-relative d-flex align-items-center">
+                        <input type="file" name="payment" id="form-input-file" class="custom-file-input" placeholder=""
+                            required>
+                        <span class="req position-absolute">*</span>
+                    </div>
+                    <p class="fst-italic fw-bold mt-4">Metode pembayaran tertera di rulebook</p>
+                    <input type="submit" value="Kirim" name="submit">
+                </form>
+            </div>
         </div>
     </section>
     <!-- Font Awesome -->

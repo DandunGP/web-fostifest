@@ -1,5 +1,5 @@
 @component('mail::message')
-<p>Dear {{ $userMail->name }}</p>
+<p>Dear {{ $userMail['fullname'] }}</p>
 
 <p>Terimakasih telah mendaftar webinar Upgrade Your Digital Security with Edho Maland.
     Untuk informasi lebih lanjut, silahkan bergabung dengan grup WhatsApp kami melalui link berikut :</p>

@@ -167,6 +167,10 @@ class AdminController extends Controller
     {
         Mail::to($webinar->email)->send(new WebinarMail($webinar));
 
+        $webinar->update([
+            'send_email' => 'V',
+        ]);
+
         return redirect('/peserta-webinar')->with('success', 'Email sudah dikirim');
     }
 }

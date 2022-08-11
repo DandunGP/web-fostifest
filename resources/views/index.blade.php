@@ -150,8 +150,8 @@
             <span class="close">&times;</span>
             <p align="center"><img src="asset/image-lock.png" style="width:200px;"></p>
             <p align="center" style="margin-top:10px;"> Terimakasih sudah mendaftar.</p>
-            <p align="center" style="margin-top:10px;"> Untuk informasi selanjutnya dapat di cek pada email masing
-                masing 1 x 24 jam</p>
+            <p align="center" style="margin-top:10px;"> Untuk informasi selanjutnya silahkan cek email anda dalam 1 x 24
+                jam</p>
         </div>
 
     </div>
