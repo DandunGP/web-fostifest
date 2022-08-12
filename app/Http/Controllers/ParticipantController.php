@@ -56,7 +56,9 @@ class ParticipantController extends Controller
             'team_name' => 'required',
             'email' => 'required',
             'name' => 'required',
+            'gender' => 'required',
             'agency' => 'required',
+            'agency_sp' => '',
             'ktm' => 'image|file',
             'idcard' => 'image|file|required'
         ]);
@@ -74,11 +76,19 @@ class ParticipantController extends Controller
         $fileName2 = $request->team_name . '-' . $request->name . '-ketua-' . date('dmYhis') . '.' . $extension2;
         $idcard = $request->file('idcard')->storeAs('idCard', $fileName2);
 
+        if ($request->agency == 'ums') {
+            $agencySp = 'Universitas Muhammadiyah Surakarta';
+        } else {
+            $agencySp = $request->agency_sp;
+        }
+
         Leader::create([
             'team_name' => $request->team_name,
             'email' => $request->email,
             'name' => $request->name,
+            'gender' => $request->gender,
             'agency' => $request->agency,
+            'agency_sp' => $agencySp,
             'ktm' => $ktm,
             'idcard' => $idcard,
             'competition_id' => auth()->user()->competition->id
@@ -92,8 +102,10 @@ class ParticipantController extends Controller
         $request->validate([
             'team_name1' => 'required',
             'email1' => 'required',
+            'gender1' => 'required',
             'name1' => 'required',
             'agency1' => 'required',
+            'agency_sp1' => '',
             'ktm1' => 'image|file',
             'idcard1' => 'image|file|required'
         ]);
@@ -111,11 +123,19 @@ class ParticipantController extends Controller
         $fileName2 = $request->team_name1 . '-' . $request->name1 . '-anggota-' . date('dmYhis') . '.' . $extension2;
         $idcard = $request->file('idcard1')->storeAs('idCard', $fileName2);
 
+        if ($request->agency1 == 'ums') {
+            $agencySp = "Universitas Muhammadiyah Surakarta";
+        } else {
+            $agencySp = $request->agency_sp1;
+        }
+
         Member1::create([
             'team_name' => $request->team_name1,
             'email' => $request->email1,
             'name' => $request->name1,
+            'gender' => $request->gender1,
             'agency' => $request->agency1,
+            'agency_sp' => $agencySp,
             'ktm' => $ktm,
             'idcard' => $idcard,
             'competition_id' => auth()->user()->competition->id
@@ -130,7 +150,9 @@ class ParticipantController extends Controller
             'team_name2' => 'required',
             'email2' => 'required',
             'name2' => 'required',
+            'gender2' => 'required',
             'agency2' => 'required',
+            'agency_sp1' => '',
             'ktm2' => 'image|file',
             'idcard2' => 'image|file|required'
         ]);
@@ -148,11 +170,19 @@ class ParticipantController extends Controller
         $fileName2 = $request->team_name2 . '-' . $request->name2 . '-anggota-' . date('dmYhis') . '.' . $extension2;
         $idcard = $request->file('idcard2')->storeAs('idCard', $fileName2);
 
+        if ($request->agency2 == 'ums') {
+            $agencySp = "Universitas Muhammadiyah Surakarta";
+        } else {
+            $agencySp = $request->agency_sp1;
+        }
+
         Member2::create([
             'team_name' => $request->team_name2,
             'email' => $request->email2,
             'name' => $request->name2,
+            'gender' => $request->gender2,
             'agency' => $request->agency2,
+            'agency_sp' => $agencySp,
             'ktm' => $ktm,
             'idcard' => $idcard,
             'competition_id' => auth()->user()->competition->id
@@ -174,7 +204,9 @@ class ParticipantController extends Controller
             'team_name' => 'required',
             'email' => 'required',
             'name' => 'required',
+            'gender' => 'required',
             'agency' => 'required',
+            'agency_sp' => '',
             'ktm' => 'image|file',
             'idcard' => 'image|file'
         ]);
@@ -204,12 +236,17 @@ class ParticipantController extends Controller
             if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
+            $agencySp = $request->agency_sp;
+        } else {
+            $agencySp = 'Universitas Muhammadiyah Surakarta';
         }
 
 
         $leader->update([
             'name' => $request->name,
+            'gender' => $request->gender,
             'agency' => $request->agency,
+            'agency_sp' => $agencySp,
             'ktm' => $ktm,
             'idcard' => $idCard,
         ]);
@@ -230,7 +267,9 @@ class ParticipantController extends Controller
             'team_name' => 'required',
             'email' => 'required',
             'name' => 'required',
+            'gender' => 'required',
             'agency' => 'required',
+            'agency_sp' => '',
             'ktm' => 'image|file',
             'idcard' => 'image|file'
         ]);
@@ -260,12 +299,17 @@ class ParticipantController extends Controller
             if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
+            $agencySp = $request->agency_sp;
+        } else {
+            $agencySp = "Universitas Muhammadiyah Surakarta";
         }
 
 
         $member1->update([
             'name' => $request->name,
+            'gender' => $request->gender,
             'agency' => $request->agency,
+            'agency_sp' => $agencySp,
             'ktm' => $ktm,
             'idcard' => $idCard,
         ]);
@@ -286,7 +330,9 @@ class ParticipantController extends Controller
             'team_name' => 'required',
             'email' => 'required',
             'name' => 'required',
+            'gender' => 'required',
             'agency' => 'required',
+            'agency_sp' => '',
             'ktm' => 'image|file',
             'idcard' => 'image|file'
         ]);
@@ -316,12 +362,17 @@ class ParticipantController extends Controller
             if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
+            $agencySp = $request->agency_sp;
+        } else {
+            $agencySp = "Universitas Muhammadiyah Surakarta";
         }
 
 
         $member2->update([
             'name' => $request->name,
+            'gender' => $request->gender,
             'agency' => $request->agency,
+            'agency_sp' => $agencySp,
             'ktm' => $ktm,
             'idcard' => $idCard,
         ]);

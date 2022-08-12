@@ -54,14 +54,24 @@
                     <span class="req position-absolute">*</span>
                 </div>
                 <div class="input-form position-relative">
+                    <p class="label position-absolute">Jenis Kelamin</p>
+                    <select class="form-input px-4" name="gender">
+                        <option value="Laki=laki" @if($leader->gender == 'Laki-laki') selected @endif>Laki-laki</option>
+                        <option value="Perempuan" @if($leader->gender == 'Perempuan') selected @endif>Perempuan</option>
+                    </select>
+                    <span class="req position-absolute">*</span>
+                </div>
+                <div class="input-form position-relative">
                     <p class="label position-absolute">Instansi</p>
                     <select class="form-input px-4" name="agency" id="instansi" onChange="getValue2()">
-                        <option value="ums">Universitas Muhammadiyah Surakarta</option>
-                        <option value="umum">Umum</option>
+                        <option value="ums" @if($leader->agency == 'ums') selected @endif>Universitas Muhammadiyah
+                            Surakarta</option>
+                        <option value="umum" @if($leader->agency == 'umum') selected @endif>Umum</option>
                     </select>
                     <span class="req position-absolute"><i class="fa-solid fa-angle-down"></i></span>
                 </div>
                 <input type="hidden" name="oldImage" value="{{ $leader->ktm }}">
+                @if($leader->agency == "ums")
                 <div id="from-ums" class="">
                     <p class="form-limit text-start ms-4 fw-bold">KTM UMS</p>
                     <div class="input-form-file position-relative d-flex align-items-center">
@@ -69,6 +79,16 @@
                         <!-- <span class="req position-absolute">*</span> -->
                     </div>
                 </div>
+                @else
+                <div id="from-ums" class="">
+                    <div class="input-form position-relative">
+                        <p class="label position-absolute">Asal Instansi</p>
+                        <input type="text" name="agency_sp" id="form-input" value="{{ $leader->agency_sp }}"
+                            class="form-input px-4" placeholder="" required>
+                        <span class="req position-absolute">*</span>
+                    </div>
+                </div>
+                @endif
                 <input type="hidden" name="oldImage2" value="{{ $leader->idcard }}">
                 <p class="form-limit text-start ms-4 fw-bold">Kartu Identitas (KTP/SIM/Paspor)</p>
                 <div class="input-form-file position-relative d-flex align-items-center">

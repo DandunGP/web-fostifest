@@ -54,27 +54,47 @@
                     <span class="req position-absolute">*</span>
                 </div>
                 <div class="input-form position-relative">
+                    <p class="label position-absolute">Jenis Kelamin</p>
+                    <select class="form-input px-4" name="gender">
+                        <option value="Laki-laki" @if($member1->gender == 'Laki-laki') selected @endif>Laki-laki
+                        </option>
+                        <option value="Perempuan" @if($member1->gender == 'Perempuan') selected @endif>Perempuan
+                        </option>
+                    </select>
+                    <span class="req position-absolute"><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+                <div class="input-form position-relative">
                     <p class="label position-absolute">Instansi</p>
                     <select class="form-input px-4" name="agency" id="instansi" onChange="getValue2()">
-                        <option value="ums">Universitas Muhammadiyah Surakarta</option>
-                        <option value="umum">Umum</option>
+                        <option value="ums" @if($member1->agency == 'ums') selected @endif>Universitas Muhammadiyah
+                            Surakarta</option>
+                        <option value="umum" @if($member1->agency == 'umum') selected @endif>Umum</option>
                     </select>
                     <span class="req position-absolute"><i class="fa-solid fa-angle-down"></i></span>
                 </div>
                 <input type="hidden" name="oldImage" value="{{ $member1->ktm }}">
+                @if($member1->agency == 'ums')
                 <div id="from-ums" class="">
                     <p class="form-limit text-start ms-4 fw-bold">KTM UMS</p>
                     <div class="input-form-file position-relative d-flex align-items-center">
-                        <input type="file" name="ktm" id="form-input-file" class="custom-file-input" placeholder=""
-                            required>
+                        <input type="file" name="ktm" id="form-input-file" class="custom-file-input" placeholder="">
                         <!-- <span class="req position-absolute">*</span> -->
                     </div>
                 </div>
+                @else
+                <div id="from-ums" class="">
+                    <div class="input-form position-relative">
+                        <p class="label position-absolute">Asal Instansi</p>
+                        <input type="text" name="agency_sp" id="form-input" value="{{ $member1->agency_sp }}"
+                            class="form-input px-4" placeholder="" required>
+                        <span class="req position-absolute">*</span>
+                    </div>
+                </div>
+                @endif
                 <input type="hidden" name="oldImage2" value="{{ $member1->idcard }}">
                 <p class="form-limit text-start ms-4 fw-bold">Kartu Identitas (KTP/SIM/Paspor)</p>
                 <div class="input-form-file position-relative d-flex align-items-center">
-                    <input type="file" name="idcard" id="form-input-file" class="custom-file-input" placeholder=""
-                        required>
+                    <input type="file" name="idcard" id="form-input-file" class="custom-file-input" placeholder="">
                     <!-- <span class="req position-absolute">*</span> -->
                 </div>
                 <input type="submit" value="Change" name="submit">

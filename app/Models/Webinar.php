@@ -10,6 +10,6 @@ class Webinar extends Model
     use HasFactory;
 
     protected $fillable = [
-        'fullname', 'email', 'whatsapp', 'agency', 'ktm', 'sg_1', 'sg_2', 'sg_3', 'payment', 'send_email'
+        'fullname', 'email', 'whatsapp', 'agency', 'ktm', 'sg_1', 'sg_2', 'sg_3', 'payment', 'send_email', 'gender',  'agency_sp'
     ];
 }

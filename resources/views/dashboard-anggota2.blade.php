@@ -36,6 +36,7 @@
                         <th>Status</th>
                         <th>Nama</th>
                         <th>Email</th>
+                        <th>Jenis Kelamin</th>
                         <th>Instansi</th>
                         <th>KTM UMS</th>
                         <th>Kartu Identitas</th>
@@ -47,7 +48,8 @@
                         <td>Anggota 2</td>
                         <td>{{ $member2->name }}</td>
                         <td>{{ $member2->email }}</td>
-                        <td>{{ $member2->agency }}</td>
+                        <td>{{ $member2->gender }}</td>
+                        <td>{{ $member2->agency_sp }}</td>
                         <td>@if ($member2->agency == 'ums')
                             @if ($member2->ktm == '-')
                             {{ $member2->ktm }}
@@ -60,7 +62,7 @@
                         </td>
                         <td><img src="{{ asset('/storage/'. $member2->idcard) }}" style="width:100px;height:75px;">
                         </td>
-                        <td><a href="{{ route('showEditMember1', $member2->id) }}"
+                        <td><a href="{{ route('showEditMember2', $member2->id) }}"
                                 class="btn btn-success text-decoration-none text-white"
                                 onclick="return confirm('Are you sure you want to edit this?')">Edit</a></td>
                     </tr>
@@ -88,6 +90,14 @@
                     <p class="label position-absolute">Nama Anggota 2</p>
                     <input type="text" name="name2" id="form-input" class="form-input px-4" placeholder="" required>
                     <span class="req position-absolute">*</span>
+                </div>
+                <div class="input-form position-relative">
+                    <p class="label position-absolute">Jenis Kelamin Anggota 2</p>
+                    <select class="form-input px-4" name="gender2">
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                    <span class="req position-absolute"><i class="fa-solid fa-angle-down"></i></span>
                 </div>
                 <div class="input-form position-relative">
                     <p class="label position-absolute">Instansi Anggota 2</p>

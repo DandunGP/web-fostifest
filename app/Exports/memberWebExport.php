@@ -12,7 +12,7 @@ class memberWebExport implements FromCollection
      */
     public function collection()
     {
-        return Webinar::select('fullname', 'email', 'whatsapp', 'agency')->get();
+        return Webinar::select('fullname', 'email', 'whatsapp', 'gender', 'agency_sp')->get();
     }
 
     /**
@@ -21,6 +21,6 @@ class memberWebExport implements FromCollection
 
     public function headings(): array
     {
-        return ["Nama Lengkap", "Email", "WA", "Instansi"];
+        return ["Nama Lengkap", "Email", "WA", "Jenis Kelamin", "Instansi"];
     }
 }

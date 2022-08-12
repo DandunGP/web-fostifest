@@ -19,7 +19,9 @@ return new class extends Migration
             $table->string('team_name');
             $table->string('email');
             $table->string('name');
+            $table->string('gender');
             $table->string('agency');
+            $table->string('agency_sp');
             $table->string('ktm');
             $table->string('idcard');
             $table->foreignIdFor(Competition::class);

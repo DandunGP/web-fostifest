@@ -36,6 +36,7 @@
                         <th>Status</th>
                         <th>Nama</th>
                         <th>Email</th>
+                        <th>Jenis Kelamin</th>
                         <th>Instansi</th>
                         <th>KTM UMS</th>
                         <th>Kartu Identitas</th>
@@ -47,7 +48,8 @@
                         <td>Ketua Tim</td>
                         <td>{{ $leader->name }}</td>
                         <td>{{ $leader->email }}</td>
-                        <td>{{ $leader->agency }}</td>
+                        <td>{{ $leader->gender }}</td>
+                        <td>{{ $leader->agency_sp }}</td>
                         <td>@if ($leader->agency == 'ums')
                             @if ($leader->ktm == '-')
                             {{ $leader->ktm }}
@@ -90,6 +92,14 @@
                 <div class="input-form position-relative">
                     <p class="label position-absolute">Nama</p>
                     <input type="text" name="name" id="form-input" class="form-input px-4" placeholder="" required>
+                    <span class="req position-absolute">*</span>
+                </div>
+                <div class="input-form position-relative">
+                    <p class="label position-absolute">Jenis Kelamin</p>
+                    <select class="form-input px-4" name="gender">
+                        <option value="Laki=laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
                     <span class="req position-absolute">*</span>
                 </div>
                 <div class="input-form position-relative">

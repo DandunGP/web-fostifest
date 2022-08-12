@@ -36,6 +36,7 @@
                         <th>Status</th>
                         <th>Nama</th>
                         <th>Email</th>
+                        <th>Jenis Kelamin</th>
                         <th>Instansi</th>
                         <th>KTM UMS</th>
                         <th>Kartu Identitas</th>
@@ -47,7 +48,8 @@
                         <td>Anggota 1</td>
                         <td>{{ $member1->name }}</td>
                         <td>{{ $member1->email }}</td>
-                        <td>{{ $member1->agency }}</td>
+                        <td>{{ $member1->gender }}</td>
+                        <td>{{ $member1->agency_sp }}</td>
                         <td>@if ($member1->agency == 'ums')
                             @if ($member1->ktm == '-')
                             {{ $member1->ktm }}
@@ -87,6 +89,14 @@
                     <p class="label position-absolute">Nama Anggota 1</p>
                     <input type="text" name="name1" id="form-input" class="form-input px-4" placeholder="" required>
                     <span class="req position-absolute">*</span>
+                </div>
+                <div class="input-form position-relative">
+                    <p class="label position-absolute">Jenis Kelamin Anggota 1</p>
+                    <select class="form-input px-4" name="gender1">
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                    <span class="req position-absolute"><i class="fa-solid fa-angle-down"></i></span>
                 </div>
                 <div class="input-form position-relative">
                     <p class="label position-absolute">Instansi Anggota 1</p>

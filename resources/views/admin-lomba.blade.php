@@ -37,6 +37,7 @@
                         <th>Status</th>
                         <th>Nama</th>
                         <th>Email</th>
+                        <th>Jenis Kelamin</th>
                         <th>Instansi</th>
                         <th>KTM UMS</th>
                         <th>Kartu Identitas</th>
@@ -49,7 +50,8 @@
                         <td>Ketua</td>
                         <td>{{ $ld->name }}</td>
                         <td>{{ $ld->email }}</td>
-                        <td>{{ $ld->agency }}</td>
+                        <td>{{ $ld->gender }}</td>
+                        <td>{{ $ld->agency_sp }}</td>
                         <td>@if ($ld->agency == 'ums')
                             <img src="{{ asset('/storage/'.$ld->ktm) }}" width="100">
                             @else
@@ -65,7 +67,8 @@
                         <td>Anggota 1</td>
                         <td>{{ $m1->name }}</td>
                         <td>{{ $m1->email }}</td>
-                        <td>{{ $m1->agency }}</td>
+                        <td>{{ $m1->gender }}</td>
+                        <td>{{ $m1->agency_sp }}</td>
                         <td>@if ($m1->agency == 'ums')
                             <img src="{{ asset('/storage/'.$m1->ktm) }}" width="100">
                             @else
@@ -81,7 +84,8 @@
                         <td>Anggota 2</td>
                         <td>{{ $m2->name }}</td>
                         <td>{{ $m2->email }}</td>
-                        <td>{{ $m2->agency }}</td>
+                        <td>{{ $m2->gender }}</td>
+                        <td>{{ $m2->agency_sp }}</td>
                         <td>@if ($m2->agency == 'ums')
                             <img src="{{ asset('/storage/'.$m2->ktm) }}" width="100">
                             @else

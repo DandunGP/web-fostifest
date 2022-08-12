@@ -10,7 +10,7 @@ class Leader extends Model
     use HasFactory;
 
     protected $fillable = [
-        'team_name', 'name', 'email', 'ktm', 'idcard', 'competition_id', 'agency'
+        'team_name', 'name', 'email', 'ktm', 'idcard', 'competition_id', 'agency', 'gender', 'agency_sp'
     ];
 
     public function competition()

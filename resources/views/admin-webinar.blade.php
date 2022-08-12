@@ -47,6 +47,7 @@
                         <th>Nama</th>
                         <th>Email</th>
                         <th>No Whatsapp</th>
+                        <th>Jenis Kelamin</th>
                         <th>Instansi</th>
                         <th>Grub 1</th>
                         <th>Grub 2</th>
@@ -63,7 +64,8 @@
                         <td>{{ $wb->fullname }}</td>
                         <td>{{ $wb->email }}</td>
                         <td>{{ $wb->whatsapp }}</td>
-                        <td>{{ $wb->agency }}</td>
+                        <td>{{ $wb->gender }}</td>
+                        <td>{{ $wb->agency_sp }}</td>
                         <td> @if ($wb->agency == 'ums')
                             <img src="{{ asset('/storage/'. $wb->sg_1) }}" style="width:100px;height:75px;">
                             @else

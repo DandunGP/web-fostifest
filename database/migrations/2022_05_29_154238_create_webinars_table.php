@@ -18,7 +18,9 @@ return new class extends Migration
             $table->string('fullname');
             $table->string('email')->unique();
             $table->string('whatsapp');
+            $table->string('gender');
             $table->string('agency');
+            $table->string('agency_sp');
             $table->string('sg_1');
             $table->string('sg_2');
             $table->string('sg_3');

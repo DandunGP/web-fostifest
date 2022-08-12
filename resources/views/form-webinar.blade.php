@@ -76,12 +76,22 @@
                         <span class="req position-absolute">*</span>
                     </div>
                     <div class="input-form position-relative">
+                        <p class="label position-absolute">Jenis Kelamin</p>
+                        <select class="form-input px-4" name="gender">
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                        <span class="req position-absolute"><i class="fa-solid fa-angle-down"></i></span>
+                    </div>
+                    <div class="input-form position-relative">
                         <p class="label position-absolute">Instansi</p>
                         <select class="form-input px-4" name="agency" id="instansi" onChange="getValue()">
                             <option value="ums">Universitas Muhammadiyah Surakarta</option>
                             <option value="umum">Umum</option>
                         </select>
                         <span class="req position-absolute"><i class="fa-solid fa-angle-down"></i></span>
+                    </div>
+                    <div id="umum">
                     </div>
                     <p class="form-limit text-start ms-4 fw-bold" id="change-bukti">KTM Universitas Muhammadiyah
                         Surakarta
@@ -91,9 +101,7 @@
                             required>
                         <span class="req position-absolute">*</span>
                     </div>
-                    <div id="change">
-                    </div>
-                    <div id="share-grub" class="">
+                    <div id="share-grub">
                         <p class="form-limit text-start ms-4 fw-bold">Share Pamflet (Grup Whatsapp / Telegram) 1</p>
                         <div class="input-form-file position-relative d-flex align-items-center">
                             <input type="file" name="sg1" id="form-input-file" class="custom-file-input" placeholder=""
@@ -142,18 +150,24 @@
                         <span class="req position-absolute">*</span>
                     </div>`;
             let metode = '<p class="fst-italic fw-bold mt-4">Metode pembayaran tertera di rulebook</p>';
+            let umum= `<div class="input-form position-relative">
+                        <p class="label position-absolute">Asal Instansi</p>
+                        <input type="text" name="agency_sp" id="form-input" class="form-input px-4" placeholder=""
+                            required>
+                        <span class="req position-absolute">*</span>
+                    </div>`
             let value = $("#instansi").val();
             let instansi;
             let file;
             if(value == 'ums'){
                 instansi = 'KTM Universitas Muhammadiyah Surakarta'
                 $("#share-grub").html(grub);
-                $("#change").text("");
+                $("#umum").text("");
                 // $("#share-grub").show();
             } else{
                 instansi = 'Bukti Pembayaran'
-                $("#share-grub").text("");
-                $("#change").html(metode);
+                $("#share-grub").html(metode);
+                $("#umum").html(umum);
                 // $("#share-grub").hide();
             }
             $("#change-bukti").text(instansi);

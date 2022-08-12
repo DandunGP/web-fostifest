@@ -14,9 +14,9 @@ class memberCompExport implements FromCollection
      */
     public function collection()
     {
-        $member = Member1::select('team_name', 'email', 'name', 'agency')->get();
-        $member2 = Member2::select('team_name', 'email', 'name', 'agency')->get();
-        $leader = Leader::select('team_name', 'email', 'name', 'agency')->get();
+        $member = Member1::select('team_name', 'email', 'name', 'gender', 'agency_sp')->get();
+        $member2 = Member2::select('team_name', 'email', 'name', 'gender', 'agency_sp')->get();
+        $leader = Leader::select('team_name', 'email', 'name', 'gender', 'agency_sp')->get();
         $result = array($member, $member2, $leader);
         return collect($result);
     }

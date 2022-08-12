@@ -46,6 +46,11 @@
                             <input type="file" name="ktm${no}" id="form-input-file" class="custom-file-input" placeholder="">
                             <!-- <span class="req position-absolute" required>*</span> -->
                         </div>`;
+            let umum = `<div class="input-form position-relative">
+                            <p class="label position-absolute">Asal Instansi</p>
+                            <input type="text" name="agency_sp1" id="form-input" class="form-input px-4" placeholder="" required>
+                            <span class="req position-absolute">*</span>
+                        </div>`;
             let value = $(`#agency${no}`).val();
             let instansi;
             let file;
@@ -55,7 +60,7 @@
                 // $("#from-ums").show();
             } else{
                 instansi = 'Bukti Pembayaran'
-                $(`#from-ums-${no}`).text("");
+                $(`#from-ums-${no}`).html(umum);
                 // $("#from-ums").hide();
             }
             $("#change-bukti").text(instansi);
@@ -68,6 +73,11 @@
                             <!-- <span class="req position-absolute">*</span> -->
                         </div>`;
             let value = $("#instansi").val();
+            let umum = `<div class="input-form position-relative">
+                            <p class="label position-absolute">Asal Instansi</p>
+                            <input type="text" name="agency_sp" id="form-input" class="form-input px-4" placeholder="" required>
+                            <span class="req position-absolute">*</span>
+                        </div>`;
             let instansi;
             let file;
             if(value == 'ums'){
@@ -76,7 +86,7 @@
                 // $("#from-ums").show();
             } else{
                 instansi = 'Bukti Pembayaran'
-                $("#from-ums").text("");
+                $("#from-ums").html(umum);
                 // $("#from-ums").hide();
             }
             $("#change-bukti").text(instansi);
